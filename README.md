@@ -11,11 +11,12 @@ This repository includes:
 
 > Notes
 > - This is research/replication code (not a polished library).
-> - Notebooks were developed for Colab/Drive; paths may require adjustment.
+> - Notebooks were developed for Colab/Drive.
 
 ## Main findings (thesis summary)
 
 - Attribution methods were compared numerically under a single evaluation protocol (faithfulness, sensitivity, complexity), enabling trade-off analysis across methods.
 - Spectral attributions computed on a *local ROI* (one connected component) are typically close to those computed on the *global ROI* (all pixels of the same predicted class) within the same scene, suggesting explanations are stable with respect to ROI granularity.
 - Dataset-level aggregation shows that **10 m Sentinel-2 bands dominate** attribution for cloud segmentation, in particular **{B2, B3, B4, B8}** consistently form the core informative set.
+
 - Using band-importance ranking to keep the most informative bands and reconstruct the missing ones with a lightweight adapter enables a **13→7 band reduction** with **~≤1% relative degradation** (worst case) compared to the full 13-band input.
